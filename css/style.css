@@ -1,0 +1,377 @@
+:root {
+    --primary: #e98138;
+    --primary-light: #ffb166;
+    --primary-dark: #b15303;
+    --primary-darker: #9d3f00;
+    --secondary: #ff9800;
+    --secondary-light: #ffc947;
+    --secondary-lighter: #ffd196;
+    --secondary-dark: #c66900;
+    --secondary-darker: #a84b00;
+    --secondary-darkest: #8a2300;
+    --tertiary: #b23d00;
+    --tertiary-light: #eb6c32;
+    --tertiary-dark: #7c0300;
+    --tertiary-darker: #540000;
+
+    /*--primary: #ed335f;
+    --primary-light: #ff6d8c;
+    --primary-dark: #b40036;
+    --primary-darker: #97002c;
+    --secondary: #f9858b;
+    --secondary-light: #ffb6bb;
+    --secondary-lighter: #ffc9cc;
+    --secondary-dark: #c3555e;
+    --secondary-darker: #af414a;
+    --secondary-darkest: #9b2d36;
+    --tertiary: #761137;
+    --tertiary-light: #a94461;
+    --tertiary-dark: #450011;
+    --tertiary-darker: #24000a;*/
+}
+
+.carousel-item {
+    height: 60vh;
+    min-height: 500px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.carousel-inner, .carousel {
+    height: 60vh;
+    min-height: 500px;
+}
+
+.text-fade {
+    text-shadow: 10px 10px 10px var(--tertiary-darker), 2px 2px 3px var(--primary-light);
+}
+.colour-primary {
+    color: var(--primary);
+}
+
+.colour-primary-light {
+    color: var(--primary-light);
+}
+
+.colour-primary-dark {
+    color: var(--primary-dark);
+}
+
+.colour-secondary {
+    color: var(--secondary);
+}
+
+.colour-secondary-light {
+    color: var(--secondary-light);
+}
+
+.colour-secondary-dark {
+    color: var(--secondary-dark);
+}
+
+.colour-secondary-darker {
+    color: var(--secondary-darker);
+}
+
+.colour-tertiary {
+    color: var(--tertiary);
+}
+
+.colour-tertiary-light {
+    color: var(--tertiary-light);
+}
+
+.colour-tertiary-dark {
+    color: var(--tertiary-dark);
+}
+
+.background-colour-primary {
+    background-color: var(--primary);
+}
+
+.background-colour-primary-light {
+    background-color: var(--primary-light);
+}
+
+.background-colour-primary-dark {
+    background-color: var(--primary-dark);
+}
+
+.background-colour-secondary-darker {
+    background-color: var(--secondary-darker);
+}
+
+.background-colour-secondary {
+    background-color: var(--secondary);
+}
+
+.background-colour-secondary-light {
+    background-color: var(--secondary-light);
+}
+
+.background-colour-secondary-dark {
+    background-color: var(--secondary-dark);
+}
+
+.background-colour-tertiary {
+    background-color: var(--tertiary);
+}
+
+.background-colour-tertiary-light {
+    background-color: var(--tertiary-light);
+}
+
+.background-colour-tertiary-dark {
+    background-color: var(--tertiary-dark);
+}
+/* Color palette: https://material.io/resources/color/#!/?view.left=1&view.right=1&primary.color=212529&secondary.color=E8BF6A
+Tertiary: #9AC249
+ */
+.navbar-brand img {
+    max-height: 7vh;
+    margin-left: 10px;
+}
+.nav-item {
+    font-family: 'Alata', sans-serif;
+}
+.navbar {
+    position: fixed;
+    height: 10vh;
+    left: 0;
+    right: 0;
+
+    background-image: linear-gradient(rgba(233, 129, 56, 1), rgba(233, 129, 56, 0.6), rgba(233, 129, 56, 0));
+    background-color: unset !important;
+}
+#navbarTogglerButton {
+    margin-right: 5px;
+}
+#navbarToggler.collapsing, #navbarToggler.show {
+    background-image: linear-gradient(rgba(233, 129, 56, 0), rgba(233, 129, 56, 0.6),
+    rgba(233, 129, 56, 0.8), rgba(233, 129, 56, 0.8), rgba(233, 129, 56, 0.8), rgba(233, 129, 56, 0.8),
+    rgba(233, 129, 56, 0.8), rgba(233, 129, 56, 0.8), rgba(233, 129, 56, 0.8), rgba(233, 129, 56, 0.8),
+    rgba(233, 129, 56, 0.6), rgba(233, 129, 56, 0));
+}
+@media (max-width: 576px) {
+    .navbar-collapse {
+
+    }
+}
+@media (min-width: 576px) {
+    .carousel {
+        position: relative;
+    }
+}
+.hrTertiaryLine {
+    height: 4px!important;
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: var(--tertiary);
+}
+.mainTitle, .ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+}
+.mate {
+    font-family: 'Mate', serif;
+}
+.sectionTitle {
+    font-family: 'Mate', serif;
+    font-size: xx-large;
+}
+#eventText {
+    border-left: 3px white solid;
+}
+@media(min-width: 992px) {
+    #eventText {
+        margin-left: 5rem!important;
+    }
+}
+@media (min-width: 1200px) {
+    #eventText {
+        margin-left: 7rem!important;
+    }
+}
+#eventImages {
+    --bs-gutter-x: 0rem!important;
+}
+#participantsNumbers > div {
+    text-align: center;
+}
+#participantsNumbers > div > div {
+    background-color: red;
+    padding-top: 25%;
+    padding-bottom: 25%;
+}
+.clickBubble {
+    margin-top: 4px;
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 3%;
+    cursor: default;
+    opacity: 1;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    position: relative;
+    background-color: var(--secondary);
+    transition: color 0.5s, background-color 1s;
+}
+.participantsRow > div {
+    width: 50px;
+}
+.clickBubble > span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5%;
+}
+
+@media (max-width: 768px) {
+    .clickBubble {
+        height: 35px;
+        width: 35px;
+        font-size: 20px;
+    }
+
+    .participantsRow > div {
+        width: 35px;
+    }
+}
+@media (max-width: 576px) {
+    .clickBubble {
+        height: 30px;
+        width: 30px;
+        font-size: 18px;
+    }
+    .participantsRow > div {
+        width: 30px;
+    }
+}
+.clickBubble:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+.clickBubbleSelected {
+    color: black;
+    background-color: var(--secondary-darker);
+}
+.material-icons-outlined {
+    font-size: 14px!important;
+    margin-right: 5px;
+}
+#participantWebsite, #participantEmail {
+    color: var(--secondary-lighter);
+    text-decoration: unset;
+    font-size: 17px;
+}
+#participantWebsite:hover, #participantEmail:hover {
+    opacity: 0.5;
+}
+#participantImage0, #participantImage1, #participantImage2 {
+    border: 3px white solid;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.participantsRow {
+    white-space: nowrap;
+    overflow: auto;
+    display: block !important;
+    scrollbar-color: var(--secondary-darker) var(--secondary-dark);
+    scrollbar-width: thin;
+}
+
+.participantsRow::-webkit-scrollbar {
+    width: 1em;
+    height: 1vh;
+}
+
+.participantsRow::-webkit-scrollbar-track {
+}
+
+.participantsRow::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: var(--secondary-darker);
+}
+
+.participantsRow::-webkit-scrollbar:vertical {
+    display: none;
+}
+.participantsRow > div {
+    display: inline-block !important;
+}
+.contactBubble {
+    display: block;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10%;
+    cursor: default;
+    opacity: 1;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    position: relative;
+}
+
+.contactBubble > .fa, .contactBubble > .fab, .contactBubble > .fas {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+}
+
+.contactBubble:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.contactBubble.contactBubble-email {
+    background-color: red;
+}
+
+.contactBubble.contactBubble-facebook {
+    background-color: #3B5998;
+}
+.contactBubble.contactBubble-location {
+    background-color: coral;
+}
+.contactBubble.contactBubble-phone {
+    background-color: forestgreen
+}
+
+.contactBubble.contactBubble-small {
+    height: 50px;
+    width: 50px;
+    font-size: 29px;
+}
+#mainRow > * > a {
+    color: var(--secondary);
+}
+#mainRow > * > a:hover {
+    color: var(--secondary-dark);
+}
+.copyrightLine {
+    text-align: center;
+    padding: 5px;
+    background-color: var(--secondary-darkest);
+    font-family: 'Varela Round', sans-serif;;
+    color: white;
+    font-size: 13px;
+}
+.copyrightLine > a {
+    color: white!important;
+}
+.navbar-brand {
+    margin-right: 0.5rem;
+}
