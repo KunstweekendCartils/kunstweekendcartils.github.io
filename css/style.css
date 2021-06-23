@@ -375,3 +375,17 @@ Tertiary: #9AC249
 .navbar-brand {
     margin-right: 0.5rem;
 }
+
+#participantLine, #participantContainer {
+    display: none;
+    opacity: 0;
+}
+
+#participantLine.shown, #participantContainer.shown {
+    display: block;
+}
+
+#participantLine.shown {
+    opacity: .25;
+    transition: opacity 400ms;
+}

@@ -29,6 +29,8 @@ function viewParticipant(number, object) {
                     $("#participantImage2Link").attr("href", "./participants/" + number + "/" + value);
                 }
             });
+            $("#participantLine").addClass("shown");
+            $("#participantContainer").addClass("shown");
             $("#participantContainer").animate({opacity: 1}, 400);
         });
     });
@@ -66,7 +68,6 @@ function scrollToElement(elementID) {
 }
 
 $(document).ready(function() {
-    viewParticipant(1, document.getElementsByClassName("clickBubble")[0]);
     $(window).scroll(function() {
         const topHeight = $(this).scrollTop() + $(window).height() * (2 / 3);
         let currentID;
