@@ -78,6 +78,8 @@ $(document).ready(function() {
         let currentID;
         if($("#eventElement").offset().top >= topHeight || $(this).scrollTop() === 0) {
             currentID = "#homeElement";
+        } else if($(this).scrollTop() + $(window).height() + 1 >= $(document).height()) {
+            currentID = "#contactElement";
         } else if($("#participantsElement").offset().top >= topHeight) {
             currentID = "#eventElement";
         } else if($("#contactElement").offset().top >= topHeight) {
