@@ -14,8 +14,13 @@ function viewParticipant(number, object) {
                 } else if(key === "author") {
                     $("#participantAuthor").text(value);
                 } else if(key === "website") {
-                    $("#participantWebsite").attr("href", "http://" + value);
-                    $("#participantWebsiteText").text(value);
+                    if(value.length === 0) {
+                        $("#participantWebsite").css("display", "none");
+                    } else {
+                        $("#participantWebsite").css("display", "unset");
+                        $("#participantWebsite").attr("href", "http://" + value);
+                        $("#participantWebsiteText").text(value);
+                    }
                 } else if(key === "text") {
                     $("#participantText").text(value);
                 } else if(key === "image0") {
