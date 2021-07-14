@@ -7,6 +7,8 @@ function viewParticipant(number, object) {
         $("#participantImage0").attr("src", "./images/loading.gif");
         $("#participantImage1").attr("src", "./images/loading.gif");
         $("#participantImage2").attr("src", "./images/loading.gif");
+        $("#participantTextExpandButton").hide();
+        $("#participantTextExpandText").hide();
         $.getJSON("./participants/" + number + "/data.json", function(data) {
             $.each( data, function( key, value ) {
                 if(key === "name") {
@@ -22,7 +24,13 @@ function viewParticipant(number, object) {
                         $("#participantWebsiteText").text(value);
                     }
                 } else if(key === "text") {
-                    $("#participantText").text(value);
+                    if(value.length >= 400) {
+                        $("#participantText").text(value.substring(0, 400));
+                        $("#participantTextExpandText").text(value.substring(400));
+                        $("#participantTextExpandButton").show();
+                    } else {
+                        $("#participantText").text(value);
+                    }
                 } else if(key === "image0") {
                     loadImage("./participants/" + number + "/" + value, "#participantImage0", object);
                     $("#participantImage0Link").attr("href", "./participants/" + number + "/" + value);
@@ -40,6 +48,11 @@ function viewParticipant(number, object) {
         });
     });
 
+}
+
+function expandParticipantText() {
+    $("#participantTextExpandButton").hide();
+    $("#participantTextExpandText").show();
 }
 
 function loadImage(src, elementID, object) {

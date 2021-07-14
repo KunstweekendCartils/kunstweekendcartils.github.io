@@ -389,3 +389,12 @@ Tertiary: #9AC249
     opacity: .25;
     transition: opacity 400ms;
 }
+
+#participantTextExpandButton:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#participantTextExpandButtonColor {
+    color: var(--secondary-light);
+}
