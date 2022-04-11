@@ -9,6 +9,7 @@ function viewParticipant(number, object) {
         $("#participantImage2").attr("src", "./images/loading.gif");
         $("#participantTextExpandButton").hide();
         $("#participantTextExpandText").hide();
+        $("#participantWebsite2").css("display", "none");
         $.getJSON("./participants/" + number + "/data.json", function(data) {
             $.each( data, function( key, value ) {
                 if(key === "name") {
@@ -22,6 +23,14 @@ function viewParticipant(number, object) {
                         $("#participantWebsite").css("display", "unset");
                         $("#participantWebsite").attr("href", "http://" + value);
                         $("#participantWebsiteText").text(value);
+                    }
+                } else if(key === "website2") {
+                    if(value.length === 0) {
+                        $("#participantWebsite2").css("display", "none");
+                    } else {
+                        $("#participantWebsite2").css("display", "unset");
+                        $("#participantWebsite2").attr("href", "http://" + value);
+                        $("#participantWebsiteText2").text(value);
                     }
                 } else if(key === "text") {
                     if(value.length >= 400) {

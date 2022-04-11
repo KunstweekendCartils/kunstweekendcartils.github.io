@@ -266,12 +266,12 @@ Tertiary: #9AC249
     font-size: 14px!important;
     margin-right: 5px;
 }
-#participantWebsite, #participantEmail {
+#participantWebsite, #participantWebsite2, #participantEmail {
     color: var(--secondary-lighter);
     text-decoration: unset;
     font-size: 17px;
 }
-#participantWebsite:hover, #participantEmail:hover {
+#participantWebsite:hover, #participantWebsite2:hover, #participantEmail:hover {
     opacity: 0.5;
 }
 #participantImage0, #participantImage1, #participantImage2 {
