@@ -4,6 +4,10 @@ function viewParticipant(number, object) {
         "klaudiaMagyar", "ingridCapozzi", "tanjaDeRijkVanDerSteen", "miraPytze", "willSchropp",
         "guiseppeLamers", "gwendolijnKoppert", "johnPenning", "joopVanSchie", "josSolberg",
         "leiHannen", "leoGerritsen", "nicHeffels", "sjraBosboom", "theresieTholen"][number - 1];
+    gtag('event', 'open_participant', {
+        'participant_id': number,
+        'participant_name': id
+    });
     $(".clickBubbleSelected").map(function() {
         this.classList.remove("clickBubbleSelected")
     })
