@@ -1,4 +1,9 @@
 function viewParticipant(number, object) {
+    const id = ["fransVanStraaten", "babkeMoelee", "miaAmerica", "janVerschueren",
+        "suusElkink", "joseeBastianen", "mariejoseVanDerMeer", "helgaVanDerPoel", "johannesDonner",
+        "klaudiaMagyar", "ingridCapozzi", "tanjaDeRijkVanDerSteen", "miraPytze", "willSchropp",
+        "guiseppeLamers", "gwendolijnKoppert", "johnPenning", "joopVanSchie", "josSolberg",
+        "leiHannen", "leoGerritsen", "nicHeffels", "sjraBosboom", "theresieTholen"][number - 1];
     $(".clickBubbleSelected").map(function() {
         this.classList.remove("clickBubbleSelected")
     })
@@ -10,7 +15,7 @@ function viewParticipant(number, object) {
         $("#participantTextExpandButton").hide();
         $("#participantTextExpandText").hide();
         $("#participantWebsite2").css("display", "none");
-        $.getJSON("./participants/" + number + "/data.json", function(data) {
+        $.getJSON("./participants/" + id + "/data.json", function(data) {
             $.each( data, function( key, value ) {
                 if(key === "name") {
                     $("#participantName").text(value);
@@ -33,7 +38,7 @@ function viewParticipant(number, object) {
                         $("#participantWebsiteText2").text(value);
                     }
                 } else if(key === "text") {
-                    if(value.length >= 400) {
+                    if(value.length >= 500) {
                         $("#participantText").text(value.substring(0, 400));
                         $("#participantTextExpandText").text(value.substring(400));
                         $("#participantTextExpandButton").show();
@@ -41,14 +46,14 @@ function viewParticipant(number, object) {
                         $("#participantText").text(value);
                     }
                 } else if(key === "image0") {
-                    loadImage("./participants/" + number + "/" + value, "#participantImage0", object);
-                    $("#participantImage0Link").attr("href", "./participants/" + number + "/" + value);
+                    loadImage("./participants/" + id + "/" + value, "#participantImage0", object);
+                    $("#participantImage0Link").attr("href", "./participants/" + id + "/" + value);
                 } else if(key === "image1") {
-                    loadImage("./participants/" + number + "/" + value, "#participantImage1", object);
-                    $("#participantImage1Link").attr("href", "./participants/" + number + "/" + value);
+                    loadImage("./participants/" + id + "/" + value, "#participantImage1", object);
+                    $("#participantImage1Link").attr("href", "./participants/" + id + "/" + value);
                 } else if(key === "image2") {
-                    loadImage("./participants/" + number + "/" + value, "#participantImage2", object);
-                    $("#participantImage2Link").attr("href", "./participants/" + number + "/" + value);
+                    loadImage("./participants/" + id + "/" + value, "#participantImage2", object);
+                    $("#participantImage2Link").attr("href", "./participants/" + id + "/" + value);
                 }
             });
             $("#participantLine").addClass("shown");
