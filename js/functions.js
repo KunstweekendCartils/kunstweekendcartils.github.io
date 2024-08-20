@@ -1,6 +1,6 @@
 function viewParticipant(number, object) {
     const id = ["marianneVanDedem", "wimWilmsen", "lolkeVanDerBij", "wimBastiaensen", "willSchropp", "tanjaDeRijkVanDerSteen",
-        "leoHorbach", "chrisGadiot", "saskiaHoeboer", "helgaVanDerPoel", "michelleFaaij", "dirkBal", "eduardGerrits",
+        "leoHorbach", "chrisGadiot", "saskiaHoeboer", "helgaVanDerPoel", "michelleFaaij", "corLap", "eduardGerrits",
         "gwendolijnKoppert", "helmieSkrabanja", "annieVeldkamp", "josSolberg", "babkeMoelee", "fransVanStraaten",
         "nelRood", "sjraBosboom", "marcoKaeller", "miaAmerica", "joseeBastianen", "janVanStrien",
         "robVanDenBroek", "michielVanLuijn"][number - 1];
