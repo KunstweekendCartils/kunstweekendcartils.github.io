@@ -398,3 +398,17 @@ Tertiary: #9AC249
 #participantTextExpandButtonColor {
     color: var(--secondary-light);
 }
+
+.img-container {
+    width: 100%; /* Ensure the container matches its parent width */
+    height: 200px; /* Set the desired consistent height */
+    overflow: hidden; /* Hide the cropped parts of the image */
+}
+
+.img-container img {
+    width: 100%; /* Scale the image to fit the container's width */
+    height: 100%; /* Ensures the image fills the container's height */
+    object-fit: cover; /* Crops the top and bottom while maintaining aspect ratio */
+    display: block; /* Removes inline spacing below the image */
+}
+
