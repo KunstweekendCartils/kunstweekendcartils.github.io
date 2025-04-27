@@ -1,8 +1,8 @@
 function viewParticipant(number, object) {
     const id = ["ronaldVanLaar", "nelRood", "willSchropp", "marcellinoErven", "martienSchenk", "erikKleinSchiphorst",
-        "helmieSkrabanja", "redmerHoekstra", "ingridCapozzi", "marianneVanDedemLolkeVanDerBeij", "martinGriek", "ingridStockmann",
-        "georgesDaemen", "marcoKaeller", "saskiaHoeboer", "beateBuendgen", "babkeMoelee", "margaBoogaard", "kunsthuisTrobar",
-        "mariejoseVanDerMeer", "joergRidderbusch", "sibillaSchulz", "miriamGiesenArthurReuleaux"][number - 1];
+        "helmieSkrabanja", "redmerHoekstra", "helgaVanDerPoel", "ingridCapozzi", "marianneVanDedemLolkeVanDerBeij", "martinGriek", "ingridStockmann",
+        "georgesDaemen", "marcoKaeller", "tanjaT", "saskiaHoeboer", "beateBuendgen", "babkeMoelee", "margaBoogaard", "kunsthuisTrobar",
+        "mariejoseVanDerMeer", "joergRidderbusch", "sibillaSchulz", "miriamGiesenArthurReuleaux", "michielVanLuijn", "wilfriedKleiber"][number - 1];
     gtag('event', 'open_participant', {
         'participant_id': number,
         'participant_name': id
@@ -29,7 +29,7 @@ function viewParticipant(number, object) {
                         $("#participantWebsite").css("display", "none");
                     } else {
                         $("#participantWebsite").css("display", "unset");
-                        $("#participantWebsite").attr("href", "http://" + value);
+                        $("#participantWebsite").attr("href", "https://" + value);
                         $("#participantWebsiteText").text(value);
                     }
                 } else if(key === "website2") {
@@ -37,7 +37,7 @@ function viewParticipant(number, object) {
                         $("#participantWebsite2").css("display", "none");
                     } else {
                         $("#participantWebsite2").css("display", "unset");
-                        $("#participantWebsite2").attr("href", "http://" + value);
+                        $("#participantWebsite2").attr("href", "https://" + value);
                         $("#participantWebsiteText2").text(value);
                     }
                 } else if(key === "text") {
