@@ -2,7 +2,7 @@ function viewParticipant(number, object) {
     const id = ["helmieSkrabanja", "sibillaSchulz", "joergRidderbusch", "michielVanLuijn", "willSchropp", "miriamGiesenArthurReuleaux",
         "erikKleinSchiphorst", "saskiaHoeboer", "helgaVanDerPoel", "margaBoogaard", "redmerHoekstra", "martienSchenk", "beateBuendgen",
         "georgesDaemen", "babkeMoelee", "tanjaT", "ingridStockmann", "nelRood", "marianneVanDedemLolkeVanDerBeij", "marcellinoErven",
-        "marcoKaeller", "ronaldVanLaar", "ingridCapozzi", "mariejoseVanDerMeer", "martinGriek", "kunsthuisTrobar", "wilfriedKleiber"][number - 1];
+        "marcoKaeller", "ronaldVanLaar", "ingridCapozzi", "mariejoseVanDerMeer", "martinGriek", "kunsthuisTrobar", "wilfriedKleiber", "leonSporck"][number - 1];
     gtag('event', 'open_participant', {
         'participant_id': number,
         'participant_name': id
