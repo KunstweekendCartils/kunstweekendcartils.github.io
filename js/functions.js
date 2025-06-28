@@ -92,6 +92,10 @@ function scrollToParticipants() {
     scrollToElement("#participantsElement");
 }
 
+function scrollToHistory() {
+    scrollToElement("#historyElement");
+}
+
 function scrollToContact() {
     scrollToElement("#contactElement");
 }
@@ -104,7 +108,7 @@ function scrollToElement(elementID) {
 
 $(document).ready(function() {
     $(window).scroll(function() {
-        const topHeight = $(this).scrollTop() + $(window).height() * (2 / 3);
+        const topHeight = $(this).scrollTop() + 100 /*+ $(window).height() * (1 / 2)*/;
         let currentID;
         if($("#eventElement").offset().top >= topHeight || $(this).scrollTop() === 0) {
             currentID = "#homeElement";
@@ -112,8 +116,10 @@ $(document).ready(function() {
             currentID = "#contactElement";
         } else if($("#participantsElement").offset().top >= topHeight) {
             currentID = "#eventElement";
-        } else if($("#contactElement").offset().top >= topHeight) {
+        } else if($("#historyElement").offset().top >= topHeight) {
             currentID = "#participantsElement";
+        } else if($("#contactElement").offset().top >= topHeight) {
+            currentID = "#historyElement";
         } else {
             currentID = "#contactElement";
         }
