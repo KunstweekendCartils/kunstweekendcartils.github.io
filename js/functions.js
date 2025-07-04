@@ -2,7 +2,7 @@ function viewParticipant(number, object) {
     const id = ["helmieSkrabanja", "sibillaSchulz", "joergRidderbusch", "michielVanLuijn", "willSchropp", "miriamGiesenArthurReuleaux",
         "erikKleinSchiphorst", "saskiaHoeboer", "helgaVanDerPoel", "margaBoogaard", "redmerHoekstra", "martienSchenk", "beateBuendgen",
         "georgesDaemen", "babkeMoelee", "tanjaT", "ingridStockmann", "nelRood", "marianneVanDedemLolkeVanDerBeij", "marcellinoErven",
-        "ronaldVanLaar", "ingridCapozzi", "mariejoseVanDerMeer", "martinGriek", "marcoKaeller", "wilfriedKleiber", "leonSporck"][number - 1];
+        "ronaldVanLaar", "ingridCapozzi", "mariejoseVanDerMeer", "martinGriek", "marcoKaeller", "wilfriedKleiber", "leonSporck", "ruudZweypfenning"][number - 1];
     gtag('event', 'open_participant', {
         'participant_id': number,
         'participant_name': id
@@ -71,6 +71,12 @@ function expandParticipantText() {
     $("#participantTextExpandButton").hide();
     $("#participantTextExpandText").show();
 }
+
+function expandHistoryText() {
+    $("#historyExpand").hide();
+    $("#historyText").show();
+}
+
 
 function loadImage(src, elementID, object) {
     $('<img />').attr("src", src).on('load', function() {

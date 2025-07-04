@@ -274,7 +274,8 @@ Tertiary: #9AC249
 #participantWebsite:hover, #participantWebsite2:hover, #participantEmail:hover {
     opacity: 0.5;
 }
-#participantImage0, #participantImage1, #participantImage2 {
+
+.imgBorder {
     border: 3px white solid;
     border-radius: 10px;
     background-color: white;
@@ -390,12 +391,12 @@ Tertiary: #9AC249
     transition: opacity 400ms;
 }
 
-#participantTextExpandButton:hover {
+#participantTextExpandButton:hover, #historyExpand:hover {
     cursor: pointer;
     opacity: 0.6;
 }
 
-#participantTextExpandButtonColor {
+#participantTextExpandButtonColor, #historyExpandColor {
     color: var(--secondary-light);
 }
 
@@ -411,4 +412,3 @@ Tertiary: #9AC249
     object-fit: cover; /* Crops the top and bottom while maintaining aspect ratio */
     display: block; /* Removes inline spacing below the image */
 }
-
